@@ -1,10 +1,23 @@
+using Microsoft.EntityFrameworkCore;
+using Project1.Data;
+using Project1.Helpers.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddDbContext<ExamenContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddRepositories();
+builder.Services.AddServices();
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
