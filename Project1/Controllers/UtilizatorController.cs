@@ -1,19 +1,17 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Project1.Data;
 using Project1.Data.Models;
-using Project1.Services.TestService;
 using Project1.Services.UtilizatorService;
 
 namespace Project1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DatabaseController : ControllerBase
+    public class UtilizatorController : ControllerBase
     {
         private readonly IUtilizatorService _utilizatorService;
 
-        public DatabaseController(IUtilizatorService utilizatorService)
+        public UtilizatorController(IUtilizatorService utilizatorService)
         {
             _utilizatorService = utilizatorService;
         }
@@ -46,4 +44,3 @@ namespace Project1.Controllers
         }
     }
 }
-
