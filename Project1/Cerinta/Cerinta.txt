@@ -1,0 +1,9 @@
+Numarul 3:
+Comenzile au mai multe produse. Produse apar in mai multe comenzi. Comenzile apartin unui singur Utilizator. 
+Utilizatorul are mai multe comenzi. Creati endpointurile necesare pentru a afisa comenzile, 
+produsele, utilizatorii si a adauga comenzi, produse, utilizatori si pentru a asigna produsele pe comenzi. 
+Se va folosi implementarea code first (modele + aplicat migrarii), net. Pentru frontend se  va folosi angular sau react.
+Requesturile se vor face in service care vor fi folosite in componente. Pentru react folositi hooks, redux etc.Pentru modele adaugati ce proprietati vreti voi.
+
+Utilizator - Comanda -> ONE TO MANY
+Comanda - ComandaProdus - Produs -> MANY TO MANY
